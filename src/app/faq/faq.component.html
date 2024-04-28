@@ -1,0 +1,25 @@
+<section id="teztez">
+    <h2 class="text-center mt-4 title">Tez-tez soruşulan suallar</h2>
+    <p class="text-center subtitle mb-3 mt-4 text-muted">Əlavə sualınız olduqda bizimlə əlaqə saxlaya bilərsiniz.</p>
+    <div class="container p-5">
+        <div class="accordion accordion-flush mb-5" id="accordionId">
+            <ng-container *ngFor="let accordionData of accordionDatas">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="{{accordionData.id}}-flush">
+                        <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse'+accordionData.id" aria-expanded="false" [attr.aria-controls]="'flush-collapse'+accordionData.id">
+                            {{accordionData.title}}
+                        </button>
+                    </h2>
+                    <div id="flush-collapse{{accordionData.id}}" class="accordion-collapse collapse" [attr.aria-labelledby]="accordionData.id+ '-flush'" data-bs-parent="#accordionId">
+                        <div class="accordion-body">AVTO-KASKO - avtomobilin banının yol-nəqliyyat hadisəsi nəticəsində dəymiş zərərin, eyni zamanda hər hansı bir cisimlə toqquşmasından, təbiət hadisələrindən, yanğından, üçüncü şəxslərin qeyri-qanuni hərəkətlərindən və ya qaçırılmasından irəli gələn ziyanın sığortası deməkdir. Bu sığorta növü, üçüncü şəxslər qarşısında məsuliyyəti nəzərdə tutmur. Belə ki, məsuliyyətin risklərinə ayrıca bir sığorta növünə əsasən təminat verilir.</div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="col-xl-12 mt-5">
+            <div class="iframe-content">
+                <iframe class="col-xl-12" height="500" src="https://www.youtube.com/embed/1TFuSheQSW0?si=wVKD3xj06Bhn6cgI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>

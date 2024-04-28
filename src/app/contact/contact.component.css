@@ -1,0 +1,12 @@
+.btn-custom-success{
+    background-color: #007A5F;
+    color: white;
+}
+h1{
+    font-size: 34px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+.form-control{
+    font-size: 1.1rem;
+}

@@ -1,0 +1,44 @@
+#teztez{
+    margin: 50px;
+}
+
+#teztez h2.title  {
+    font-size: 34px;
+    font-weight: 700;
+    font-family: "Poppins";
+    margin-top: 30px;
+}
+
+.subtitle{
+    font-size: 20px;
+}
+
+.iframe-content{
+    margin-top: 30px !important;
+}
+
+.accordion-button::after{
+    color: #007A5F !important;
+    order: -1;
+    margin-left: 0;
+    margin-right:0.5em;
+}
+.accordion-button:focus{
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.accordion-button[aria-expanded="false"]::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus-lg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2'/%3E%3C/svg%3E");
+}
+
+.accordion-button[aria-expanded="true"]::after
+{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash-lg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8'/%3E%3C/svg%3E");
+}
+
+.accordion-flush .accordion-item .accordion-button{
+    color: black;
+    margin-bottom: 5px;
+    font-weight: bold;
+}

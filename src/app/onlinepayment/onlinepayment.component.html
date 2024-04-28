@@ -1,0 +1,65 @@
+<div class="header d-flex justify-content-between align-items-center">
+    <div class="logo">
+        <a href="/"><img src="/assets/images/logo.svg"></a>
+    </div>
+    <div class="d-flex flex-grow-1 justify-content-end align-items-center">
+        <a class="me-3 color-green">
+            <i class="fa-solid fa-phone fa-lg"></i> *7000
+        </a>
+        <select class="form-select form-select-sm">
+            <option selected value="az">AZ</option>
+            <option value="2">EN</option>
+            <option value="3">RU</option>
+        </select>
+    </div>
+</div>
+<hr>
+<div class="containers mt-5 mb-5">
+    <div class="content">
+        <div class="user">
+            <div class="avatar">
+                <div class="circle-border" [ngClass]="{ 'active': firstSectionActive, 'done': firstSectionDone }"></div>
+                <div class="dot" [ngClass]="{ 'done': firstSectionDone, 'dot': firstSectionActive }"></div>
+            </div>
+            <div class="line"></div>
+            <div class="avatar">
+                <div class="circle-border" [ngClass]="{ 'active': secondSectionActive, 'done': secondSectionDone }"></div>
+                <div class="done" [ngClass]="{ 'done': secondSectionDone, 'dot': secondSectionActive }"></div>
+            </div>
+        </div>
+        <div class="title" [style.display]="firstSectionVisible ? 'block' : 'none'">Avtonəqliyyat məlumatları</div>
+        <div id="first-section" class="details" [style.display]="firstSectionVisible ? 'block' : 'none'">
+            <div class="item mb-4">
+                <div class="col-md-12 mb-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Dövlət qeydiyyat nişanı">
+                        <div><i class="fas fa-info-circle"></i></div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Avtomobilin şəhadətnamə nömrəsi">
+                        <div><i class="fas fa-info-circle"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="second-section" class="details" [style.display]="secondSectionVisible ? 'block' : 'none'">
+            <div class="item mb-4">
+                <div class="col-md-12">
+                    <div class="col-md-12 text-center mb-3">
+                        <i class="color-green fa-regular fa-circle-check fa-5x"></i>
+                    </div>
+                    <h4 class="title">Success başlıq</h4>
+                    <p class="mt-4 mb-4">Lorem ipsum dolor sit amet consectetur. Gravida pellentesque at lectus vel suscipit.</p>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn button back" (click)="backToFirstSection()" *ngIf="secondSectionVisible">Geri dön</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons mt-4" id="send-buttons">
+            <button class="btn button next" (click)="nextSection()" *ngIf="!secondSectionVisible">Növbəti</button>
+        </div>
+    </div>
+</div>

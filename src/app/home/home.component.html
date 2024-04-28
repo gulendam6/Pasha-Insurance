@@ -1,0 +1,106 @@
+<app-header></app-header>
+<main>
+    <section class="bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="col-md-6 pt-5">
+                    <div class="tab-button">
+                        <ul class="nav nav-tabs nav-pills" id="myTab" role="tablist">
+                            <ng-container *ngFor="let homeTab of homeTabs">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link tab-btn " [ngClass]="{ 'active': homeTab.active,}" id="{{homeTab.src}}-tab" data-bs-toggle="tab" [attr.data-bs-target]="'#' + homeTab.src" type="button" role="tab" [attr.aria-controls]="homeTab.src" [attr.aria-selected]="homeTab.active" (click)="logActiveTabSrc(homeTab.is_packet)">{{ homeTab.title }}</button>
+                                </li>
+                            </ng-container>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="tab-content pb-5" id="myTabContent">
+                    <ng-container *ngFor="let homeTab of homeTabs">
+                        <div class="tab-pane fade" [ngClass]="{ 'show active': homeTab.active}" id="{{homeTab.src}}" role="tabpanel" [attr.aria-labelledby]="homeTab.src + '-tab'">
+                            <div class="d-flex justify-content-between">
+                                <div class="col-md-6 mt-5">
+                                    <h2 class="title mb-4">{{homeTab.title}}</h2>
+                                    <p class="description mb-5">{{homeTab.description}}</p>
+                                    <div class="bottom-button">
+                                        <a *ngIf="homeTab.button_one_name" href="{{homeTab.button_one_url}}" class="btn btn-lg btn-green">{{homeTab.button_one_name}}</a>
+                                        <a *ngIf="homeTab.button_two_name" href="{{homeTab.button_two_url}}" class="btn btn-lg btn-gray">{{homeTab.button_two_name}}</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                    <img src="{{homeTab.Image}}" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <app-guarantees></app-guarantees>
+
+    <app-packets *ngIf="showPackets"></app-packets>
+
+
+
+    <div class="p-5">
+        <owl-carousel-o [options]="carouselOptions">
+            <ng-container *ngFor="let slide of slides">
+                <ng-template carouselSlide [id]="slide.id">
+                    <div class="d-flex justify-content-between p-4">
+                        <div class="col-md-7">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2 class="title-slider">{{ slide.title }}</h2>
+                                        <h6 class="text-muted title-desc">{{ slide.description }}</h6>
+                                        <div class="mt-4 mb-4">
+                                            <a href="{{slide.button_one_url}}" class="col-md-3 btn btn-link">
+                                                <span class="px-4">{{slide.button_one_name}}</span>
+                                            </a>
+                                            <a href="{{slide.button_two_url}}" class="btn btn-more">
+                                                <span>{{slide.button_two_name}}</span> <i class="fas fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h6 class="text-muted mt-2 mb-1">{{slide.countdownTitle}}</h6>
+                                        <div class="deal-countdown is-countdown mt-3" data-unit="2030-09-05T00:00:00">
+                                            <span class="countdown-row countdown-show3">
+                                                <span class="countdown-section">
+                                                    <span id="days" class="countdown-amount">{{ days }}</span>
+                                                    <span class="countdown-period">Gün</span>
+                                                </span>
+                                                <span class="countdown-section">
+                                                    <span id="hours" class="countdown-amount">{{ hours }}</span>
+                                                    <span class="countdown-period">Saat</span>
+                                                </span>
+                                                <span class="countdown-section">
+                                                    <span id="minutes" class="countdown-amount">{{ minutes }}</span>
+                                                    <span class="countdown-period">Dəqiqə</span>
+                                                </span> 
+                                                <span class="countdown-section">
+                                                    <span id="seconds" class="countdown-amount">{{ seconds }}</span>
+                                                    <span class="countdown-period">Saniyə</span>
+                                                </span>
+                                            </span>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex justify-content-center align-items-center">
+                            <img src="{{slide.sliderImage}}" class="img-fluid">
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+    <app-faq></app-faq>
+    <app-similarproduct></app-similarproduct>
+    <app-contact></app-contact>
+</main>
+<app-footer></app-footer>

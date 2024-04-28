@@ -1,0 +1,75 @@
+footer{
+    height: auto;
+    background-color: #212121 !important;
+}
+
+.footer_logo img {
+  width: 100%;
+}
+
+.text-gray{
+  color: #cecece;
+}
+
+.list-unstyled li
+{
+  margin-top: 20px;
+}
+
+.list-unstyled li a{
+  color: white;
+}
+
+.subscribe_section {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe_section form {
+  display: flex;
+}
+
+.subscribe_section input[type="email"],
+.subscribe_section button {
+  height: 40px;
+  padding: 0 10px;
+}
+
+.download-button{
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+}
+
+.text-download
+{
+  margin-left: 10px;
+}
+
+.input-group input{
+  border-radius: 8px !important;
+}
+
+#button-sub
+{
+  margin-left: 20px;
+  border-radius: 8px;
+}
+
+hr{
+  color: #cecece;
+}
+.copyright {
+  font-size: 14px;
+}
+
+.social-media ul li a{
+  color: white;
+}
+
+.social-media ul li {
+  margin-right: 10px;
+}
+.social-media ul li:last-child{
+  margin-right: 0;
+} 

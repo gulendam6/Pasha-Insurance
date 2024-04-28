@@ -1,0 +1,20 @@
+<div id="guarantees" class="container">
+    <div class="mt-5 mb-3"><h2 class="text-center">Təminatlar</h2></div>
+    <div class="container-fluid bg-trasparent d-flex justify-content-center" style="position: relative;">
+        <div class="row mt-2 d-flex justify-content-center"> 
+            <ng-container *ngFor="let data of guaranteesData">
+                <div class="col col-4 p-4"> 
+                    <div class="card">
+                        <img src="{{data.img}}" class="card-img-top"> 
+                        <div class="card-body">
+                            <h6 class="card-title text-center p-2">{{data.title}}</h6> 
+                        </div>
+                    </div>
+                </div> 
+            </ng-container>
+            <div class="col-12 mt-5 mb-5 d-flex justify-content-center align-items-center">
+                <button class="btn btn-custom-success">Onlayn Elde Et</button>
+            </div>
+        </div> 
+    </div> 
+</div>

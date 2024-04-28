@@ -1,0 +1,152 @@
+.header{
+    width: 100%;
+    height: 60px;
+    padding: 0px 15px 0px 10px;
+}
+
+.header .logo{
+    width: 120px;
+    height: 40px;
+}
+
+.header .logo img{
+    width: 100%;
+    height: 40px;
+}
+
+hr{
+    margin: 0;
+    height: 5px;
+    background-color: #D1D5DB;
+}
+.form-select{
+    width: 70px !important;
+    height: 30px;
+}
+
+.color-green{
+    color: #007A5F;
+}
+
+
+.containers {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 60px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+}
+.user {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar {
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+.avatar .circle-border {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    border-radius: 9999px;
+    border: 2px solid #D1D5DB;
+}
+.avatar .circle-border.active{
+    border: 2px solid #007A5F !important;
+}
+.avatar .dot {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: #007A5F;
+    border-radius: 9999px;
+    left: 11px;
+    top: 11px;
+}
+.line {
+    width: 120px;
+    height: 2px;
+    background: #D1D5DB;
+}
+.title {
+    text-align: center;
+    color: #262626;
+    font-size: 32px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    line-height: 48px;
+    word-wrap: break-word;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+}
+.item {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+}
+.button {
+    width: 432px;
+    height: 52px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-family: 'Public Sans';
+    font-weight: 500;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+.finish,
+.next {
+    background: #0093C9;
+    color: white;
+}
+.back {
+    background: white;
+    border: 1.5px solid #D9D9D9;
+    color: #262626;
+}
+.input-group div i{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    align-items: center;
+    height: 50px;
+    color: #D1D5DB;
+}
+.form-control{
+    padding: 14px;
+}

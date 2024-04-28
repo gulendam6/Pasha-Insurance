@@ -1,0 +1,42 @@
+<div class="container p-5" id="packet">
+    <div class="mb-3"><h2 class="text-center">Paketlər</h2></div>
+
+    <div class="tab-button p-5 d-flex justify-content-center">
+        <ul class="nav nav-tabs nav-pills" id="packetTab" role="tablist">
+            <ng-container *ngFor="let packetTab of packetTabs">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link tab-btn " [ngClass]="{ 'active': packetTab.active,}" id="tab-{{packetTab.src}}" data-bs-toggle="tab" [attr.data-bs-target]="'#' + packetTab.src" type="button" role="tab" [attr.aria-controls]="packetTab.src" [attr.aria-selected]="packetTab.active">{{ packetTab.packet_name }}</button>
+                </li>
+            </ng-container>
+        </ul>
+    </div>
+    <div class="col-md-12">
+        <div class="tab-content pb-5" id="packetTabContent">
+            <ng-container *ngFor="let packetTab of packetTabs">
+                <div class="tab-pane fade" [ngClass]="{ 'show active': packetTab.active}" id="{{packetTab.src}}" role="tabpanel" [attr.aria-labelledby]="'tab-'+ packetTab.src">
+                    <div class="col md 12 px-5">
+                        <div class="card p-4">
+                            <ng-container *ngFor="let data of packetTab.content">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div class="col-md-6">
+                                        {{data.title}}
+                                    </div>
+                                    <div class="col-md-6 d-flex justify-content-end">
+                                        {{data.description}}
+                                    </div>
+                                </div>
+                                <span class="line"></span>
+                            </ng-container>
+                        </div>
+                        <div class="col-md-12 mt-4 mb-5 text-center">
+                            <p><b>Qeyd: </b>Avtomobilin istehsal ilindən asılı olaraq resmi və ya qəyr-resmi servisdə təmir təminatı müştəri tarafindan səçilə bilər.</p>
+                        </div>
+                        <div class="col-12 mt-5 mb-5 d-flex justify-content-center align-items-center">
+                            <button class="btn btn-custom-info">Onlayn Əldə et</button>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
